@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAT8k·SYNC — Telemetry, provisioning, audit & analytics for Catalyst 8000v</title>
+<meta name="description" content="CAT8k·SYNC is a network automation platform for the Cisco Catalyst 8000v. Live telemetry, one-click provisioning, compliance audit and deep analytics from a browser window or a shell.">
+<link rel="icon" type="image/png" href="assets/images/cat8k_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#top">
+      <img src="assets/images/cat8k_logo.png" alt="CAT8k·SYNC logo" class="brand-mark">
+      <span class="brand-name">CAT8k<span class="brand-dot">·</span>SYNC</span>
+    </a>
+    <nav class="nav-links" aria-label="primary">
+      <a href="#features">Features</a>
+      <a href="#ui">Interface</a>
+      <a href="#analytics">Analytics</a>
+      <a href="#architecture">Architecture</a>
+      <a href="#stack">Stack</a>
+    </nav>
+    <a class="btn btn-ghost nav-cta" href="https://github.com/MOREQASSE/CAT8k-SYNC" target="_blank" rel="noopener">
+      <svg viewBox="0 0 16 16" width="14" height="14" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      GitHub
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="hero-glow hero-glow-a"></div>
+      <div class="hero-glow hero-glow-b"></div>
+      <div class="hero-scan"></div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-tag reveal">
+          <span class="tag-pulse"></span>
+          LIVE&nbsp;ON&nbsp;GITHUB&nbsp;·&nbsp;APACHE&nbsp;2.0&nbsp;·&nbsp;PFA&nbsp;PROJECT
+        </div>
+        <h1 class="hero-title reveal">
+          Command your<br>
+          <span class="grad-word">Catalyst&nbsp;8000v</span><br>
+          from the browser.
+        </h1>
+        <p class="hero-sub reveal">
+          CAT8k·SYNC is a network-automation platform for a single Cisco Catalyst 8000v edge router —
+          live telemetry, one-click branch provisioning, compliance auditing and deep analytics,
+          all in one dark control room. RESTCONF primary, NETCONF &amp; SSH in reserve.
+        </p>
+        <div class="hero-actions reveal">
+          <a class="btn btn-primary" href="https://github.com/MOREQASSE/CAT8k-SYNC" target="_blank" rel="noopener">
+            <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+            View on GitHub
+          </a>
+          <a class="btn btn-ghost" href="#ui">See the interface</a>
+        </div>
+      </div>
+
+      <div class="hero-stage reveal">
+        <div class="feed" id="feed" aria-hidden="true">
+          <div class="feed-head">
+            <span class="feed-title">fabric.ops — live feed</span>
+            <span class="feed-dot"></span>
+          </div>
+          <div class="feed-body"><span class="feed-log" id="feedLog"></span></div>
+        </div>
+        <div class="hero-shot">
+          <div class="shot-chrome">
+            <span class="chrome-btn chrome-red"></span>
+            <span class="chrome-btn chrome-yellow"></span>
+            <span class="chrome-btn chrome-green"></span>
+            <span class="chrome-url">127.0.0.1:17771/#home</span>
+          </div>
+          <img src="assets/images/web_qa-home.png" alt="CAT8k·SYNC dashboard — home view" loading="eager">
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-metrics" aria-label="platform metrics">
+      <div class="metric reveal"><b class="m-num" data-count="9">0</b><span class="m-lab">views</span></div>
+      <div class="metric reveal"><b class="m-num" data-count="16">0</b><span class="m-lab">audit policies</span></div>
+      <div class="metric reveal"><b class="m-num" data-count="5">0</b><span class="m-lab">sec provisioning</span></div>
+      <div class="metric reveal"><b class="m-num" data-count="3">0</b><span class="m-lab">transports</span></div>
+      <div class="metric reveal"><b class="m-num" data-count="0">0</b><span class="m-lab">stored creds</span></div>
+      <div class="metric reveal"><b class="m-num" data-count="1">0</b><span class="m-lab">control room</span></div>
+    </div>
+  </section>
+
+  <!-- ============ TICKER ============ -->
+  <section class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="tickerTrack">
+      <span>RESTCONF</span><i>◆</i>
+      <span>NETCONF</span><i>◆</i>
+      <span>SSHv2</span><i>◆</i>
+      <span>SQLITE</span><i>◆</i>
+      <span>JINJA2</span><i>◆</i>
+      <span>PYWEBVIEW</span><i>◆</i>
+      <span>PLAYWRIGHT QA</span><i>◆</i>
+      <span>ENCRYPTED VAULT</span><i>◆</i>
+      <span>DRIFT DETECTION</span><i>◆</i>
+      <span>LOOPBACK-ONLY</span><i>◆</i>
+      <span>16-POLICY AUDIT</span><i>◆</i>
+      <span>5s PROVISION</span><i>◆</i>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="section" id="features">
+    <div class="section-head reveal">
+      <span class="eyebrow">01 / CAPABILITIES</span>
+      <h2>One edge router.<br>Full command suite.</h2>
+      <p>Built for a single Catalyst 8000v, end to end — collect, detect, provision, audit, analyse.</p>
+    </div>
+
+    <div class="grid-cards">
+      <article class="card reveal">
+        <span class="card-ico">⌁</span>
+        <h3>Live telemetry</h3>
+        <p>Poll interface state, ARP, BGP and CPU/memory over RESTCONF and pin every observation to a local SQLite store for weeks of history.</p>
+        <span class="card-tag">RESTCONF · SQLite</span>
+      </article>
+      <article class="card reveal">
+        <span class="card-ico">⚙</span>
+        <h3>One-click provisioning</h3>
+        <p>Jinja2-templated RESTCONF operations spin up branch networks, sub-departments and static hosts in roughly five seconds per cycle.</p>
+        <span class="card-tag">Jinja2 · RESTCONF</span>
+      </article>
+      <article class="card reveal">
+        <span class="card-ico">⚑</span>
+        <h3>Compliance &amp; audit</h3>
+        <p>A 16-policy posture scan flags drift, banner and SSH issues — with one-click fixes, revert, factory reset, and an immutable event ledger.</p>
+        <span class="card-tag">16 policies · ledger</span>
+      </article>
+      <article class="card reveal">
+        <span class="card-ico">▤</span>
+        <h3>Deep analytics</h3>
+        <p>Windowed 1D / 1W / 1M charts for resource load, availability, ARP scale, throughput, error bursts and top talkers — each windowed graph in sync.</p>
+        <span class="card-tag">1D · 1W · 1M · ALL</span>
+      </article>
+      <article class="card reveal">
+        <span class="card-ico">◈</span>
+        <h3>Encrypted vault</h3>
+        <p>Credentials never touch disk in plain text. They live in an encrypted SQLite vault, are masked everywhere, and are used only at call time.</p>
+        <span class="card-tag">at-rest encryption</span>
+      </article>
+      <article class="card reveal">
+        <span class="card-ico">✓</span>
+        <h3>QA-gated shipping</h3>
+        <p>A Playwright suite exercises every view, console logs are watched, and every release ships only after the full gate runs clean.</p>
+        <span class="card-tag">playwright · 40+ checks</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ UI GALLERY ============ -->
+  <section class="section section-dark" id="ui">
+    <div class="section-head reveal">
+      <span class="eyebrow">02 / INTERFACE</span>
+      <h2>Nine views. One dark control room.</h2>
+      <p>A loopback server on 127.0.0.1:17771 drives the same UI in a pywebview native window or your default browser. Click any view to inspect it.</p>
+    </div>
+
+    <div class="gallery reveal" id="gallery">
+      <figure class="g-item" data-src="assets/images/web_qa-home.png" data-cap="Home — fabric posture, live gauges, event feed">
+        <img src="assets/images/web_qa-home.png" alt="Home view" loading="lazy">
+        <figcaption>HOME</figcaption>
+      </figure>
+      <figure class="g-item" data-src="assets/images/web_qa-telemetry.png" data-cap="Telemetry — packet distribution, ARP/OSPF/BGP tables">
+        <img src="assets/images/web_qa-telemetry.png" alt="Telemetry view" loading="lazy">
+        <figcaption>TELEMETRY</figcaption>
+      </figure>
+      <figure class="g-item" data-src="assets/images/web_qa-topology.png" data-cap="Topology — live fabric map with host tags">
+        <img src="assets/images/web_qa-topology.png" alt="Topology view" loading="lazy">
+        <figcaption>TOPOLOGY</figcaption>
+      </figure>
+      <figure class="g-item" data-src="assets/images/web_qa-ops.png" data-cap="Ops — bring interfaces up, one click at a time">
+        <img src="assets/images/web_qa-ops.png" alt="Ops view" loading="lazy">
+        <figcaption>OPS</figcaption>
+      </figure>
+      <figure class="g-item" data-src="assets/images/web_qa-models.png" data-cap="Models — device data-model explorer">
+        <img src="assets/images/web_qa-models.png" alt="Models view" loading="lazy">
+        <figcaption>MODELS</figcaption>
+      </figure>
+      <figure class="g-item" data-src="assets/images/web_qa-audit.png" data-cap="Audit — posture score, findings, fixes and ledger">
+        <img src="assets/images/web_qa-audit.png" alt="Audit view" loading="lazy">
+        <figcaption>AUDIT</figcaption>
+      </figure>
+      <figure class="g-item" data-src="assets/images/web_qa-analytics.png" data-cap="Analytics — compliance history, throughput, top talkers">
+        <img src="assets/images/web_qa-analytics.png" alt="Analytics view" loading="lazy">
+        <figcaption>ANALYTICS</figcaption>
+      </figure>
+      <figure class="g-item" data-src="assets/images/web_qa-profile.png" data-cap="Profile — VPN profiles, credentials, device studio">
+        <img src="assets/images/web_qa-profile.png" alt="Profile view" loading="lazy">
+        <figcaption>PROFILE</figcaption>
+      </figure>
+      <figure class="g-item" data-src="assets/images/web_qa-provision.png" data-cap="Provision — branch plan, actions, add-pc registry">
+        <img src="assets/images/web_qa-provision.png" alt="Provision view" loading="lazy">
+        <figcaption>PROVISION</figcaption>
+      </figure>
+    </div>
+
+    <p class="gallery-hint reveal">— click a frame to zoom —</p>
+  </section>
+
+  <!-- ============ ANALYTICS ============ -->
+  <section class="section" id="analytics">
+    <div class="section-head reveal">
+      <span class="eyebrow">03 / ANALYTICS</span>
+      <h2>History you can actually read.</h2>
+      <p>Every time-bound chart carries a synchronized window selector — flip the whole page from the last day to the last month in one click.</p>
+    </div>
+
+    <div class="analytics-cols">
+      <div class="analytics-visual reveal">
+        <div class="shot-chrome">
+          <span class="chrome-btn chrome-red"></span>
+          <span class="chrome-btn chrome-yellow"></span>
+          <span class="chrome-btn chrome-green"></span>
+          <span class="chrome-url">/#analytics · 1W</span>
+        </div>
+        <img src="assets/images/charts_labels_final.png" alt="Analytics charts with window labels" loading="lazy">
+      </div>
+      <ul class="analytics-list reveal">
+        <li><span class="li-num">01</span>Compliance score history on a segmented speedometer — red at zero, green at your score.</li>
+        <li><span class="li-num">02</span>Resource load, fabric availability and ARP scale over sliding windows.</li>
+        <li><span class="li-num">03</span>Throughput RX/TX, error &amp; flap bursts, and top talkers ranked by traffic.</li>
+        <li><span class="li-num">04</span>A 24-hour event heat profile plus packet-size distribution.</li>
+        <li><span class="li-num">05</span>Every number comes from the local store — the device is never re-polled for a chart.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ ARCHITECTURE ============ -->
+  <section class="section section-dark" id="architecture">
+    <div class="section-head reveal">
+      <span class="eyebrow">04 / ARCHITECTURE</span>
+      <h2>One engine, two faces.</h2>
+      <p>A single orchestrator drives both the web UI and the CLI over the same transports, so the browser and the terminal always agree.</p>
+    </div>
+
+    <div class="arch-cols">
+      <div class="arch-visual reveal">
+        <img src="assets/images/device_backend_dual_mode.png" alt="Dual-mode device backend — RESTCONF primary, NETCONF + SSH fallback" loading="lazy">
+      </div>
+      <div class="arch-list reveal">
+        <div class="arch-item">
+          <span class="arch-ico">▲</span>
+          <div><h3>RESTCONF primary</h3><p>Datastore reads and edits over HTTPS 443 — the default path for telemetry and provisioning.</p></div>
+        </div>
+        <div class="arch-item">
+          <span class="arch-ico">◆</span>
+          <div><h3>NETCONF &amp; SSH reserve</h3><p>Secondary transports absorb sandbox flaps with honest retries — never a silent success.</p></div>
+        </div>
+        <div class="arch-item">
+          <span class="arch-ico">▣</span>
+          <div><h3>Shared engine</h3><p>The same orchestrator behind the web window and <code>main.py</code> — identical behaviour, one codebase.</p></div>
+        </div>
+        <div class="arch-item">
+          <span class="arch-ico">◫</span>
+          <div><h3>Local-first data</h3><p>SQLite history, encrypted vault, tamper-evident audit ledger. Loopback-only binding, no network exposure.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STACK ============ -->
+  <section class="section" id="stack">
+    <div class="section-head reveal">
+      <span class="eyebrow">05 / STACK</span>
+      <h2>Small footprint. Serious kit.</h2>
+      <p>Python under the hood, a web UI on top, and the device protocol stack in between.</p>
+    </div>
+
+    <div class="stack-wrap reveal">
+      <div class="stack-col">
+        <span class="stack-k">CORE</span>
+        <ul>
+          <li><b>Python 3.10+</b></li>
+          <li>pywebview / Edge (Chromium)</li>
+          <li>RESTCONF (requests)</li>
+          <li>NETCONF · SSH / paramiko</li>
+          <li>SQLite (local store + vault)</li>
+          <li>Jinja2 templates</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <span class="stack-k">FRONTEND</span>
+        <ul>
+          <li>Vanilla HTML / CSS / JS</li>
+          <li>Hand-drawn SVG charts</li>
+          <li>Icon sprite</li>
+          <li>Playwright QA suite</li>
+          <li>No build step, no framework</li>
+        </ul>
+      </div>
+      <div class="stack-col">
+        <span class="stack-k">TARGET</span>
+        <ul>
+          <li>Cisco Catalyst 8000v</li>
+          <li>IOS-XE native datastore</li>
+          <li>DevNet Sandbox ready</li>
+          <li>Any reachable IOS-XE node</li>
+          <li>Public or AnyConnect reservation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="cta-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="cta-glow"></div>
+    </div>
+    <div class="cta-inner reveal">
+      <img src="assets/images/Catalyst8000.jpg" alt="Cisco Catalyst 8000v hardware" class="cta-hardware" loading="lazy">
+      <h2>Take the controls.</h2>
+      <p>Fork it, run it against the always-on DevNet Sandbox, and turn one router into a managed fabric.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://github.com/MOREQASSE/CAT8k-SYNC" target="_blank" rel="noopener">
+          <svg viewBox="0 0 16 16" width="15" height="15" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+          View on GitHub
+        </a>
+        <a class="btn btn-ghost" href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <a class="brand" href="#top">
+      <img src="assets/images/cat8k_logo.png" alt="CAT8k·SYNC logo" class="brand-mark">
+      <span class="brand-name">CAT8k<span class="brand-dot">·</span>SYNC</span>
+    </a>
+    <p class="footer-note">
+      A final-year engineering project (PFA). Licensed under the
+      <a href="https://github.com/MOREQASSE/CAT8k-SYNC/blob/main/LICENSE" target="_blank" rel="noopener">Apache License 2.0</a>.
+      Cisco and Catalyst are trademarks of their respective owners.
+    </p>
+    <p class="footer-meta">
+      © 2026 <a href="https://moreqasse.work.gd/" target="_blank" rel="noopener">Mohammed Reqasse</a>
+      &nbsp;·&nbsp; <a href="https://github.com/MOREQASSE/CAT8k-SYNC" target="_blank" rel="noopener">github.com/MOREQASSE/CAT8k-SYNC</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+  <figure class="lb-frame">
+    <img id="lbImg" src="" alt="Enlarged screenshot">
+    <figcaption id="lbCap"></figcaption>
+  </figure>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
