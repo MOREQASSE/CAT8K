@@ -337,8 +337,7 @@ button{font-family:inherit;cursor:pointer}
 .cta-glow{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:700px;height:400px;background:radial-gradient(ellipse, rgba(16,185,129,.22), transparent 70%);filter:blur(40px)}
 .cta-inner{position:relative;max-width:680px;margin:0 auto}
 .cta-hardware{
-  margin:0 auto 34px;width:min(440px,100%);border-radius:var(--radius);
-  border:1px solid var(--line-strong);box-shadow:0 24px 60px rgba(0,0,0,.55);
+  margin:0 auto 34px;width:min(800px,100%);
   filter:saturate(.9);
 }
 .cta h2{font-family:var(--font-display);font-weight:700;font-size:clamp(32px,5vw,50px);letter-spacing:-.01em}
