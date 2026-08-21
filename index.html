@@ -3,13 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CAT8k·SYNC — Telemetry, provisioning, audit & analytics for Catalyst 8000v</title>
-<meta name="description" content="CAT8k·SYNC is a network automation platform for the Cisco Catalyst 8000v. Live telemetry, one-click provisioning, compliance audit and deep analytics from a browser window or a shell.">
+<title>Catalyst 8000v Automation &amp; Telemetry — CAT8k·SYNC</title>
+<meta name="description" content="Open-source CAT8k·SYNC automates your Cisco Catalyst 8000v: live RESTCONF telemetry, one-click provisioning, compliance audit and analytics. Apache 2.0.">
+<meta name="keywords" content="Catalyst 8000v, network automation, telemetry dashboard, RESTCONF provisioning, Cisco DevNet Sandbox, network analytics, network engineering PFA">
+<meta name="author" content="Mohammed Reqasse">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://cat8k.web.app/">
 <link rel="icon" type="image/png" href="assets/images/cat8k_logo.png">
+<link rel="preload" as="image" href="assets/images/web_qa-home.webp" fetchpriority="high" type="image/webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CAT8k·SYNC">
+<meta property="og:title" content="Catalyst 8000v Automation &amp; Telemetry — CAT8k·SYNC">
+<meta property="og:description" content="Open-source CAT8k·SYNC automates your Cisco Catalyst 8000v: live RESTCONF telemetry, one-click provisioning, compliance audit and analytics.">
+<meta property="og:url" content="https://cat8k.web.app/">
+<meta property="og:image" content="https://cat8k.web.app/assets/images/web_qa-home.png">
+<meta property="og:image:width" content="1480">
+<meta property="og:image:height" content="940">
+<meta property="og:image:alt" content="CAT8k·SYNC home dashboard for Cisco Catalyst 8000v">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Catalyst 8000v Automation &amp; Telemetry — CAT8k·SYNC">
+<meta name="twitter:description" content="Open-source CAT8k·SYNC automates your Cisco Catalyst 8000v: live telemetry, one-click provisioning, compliance audit and analytics.">
+<meta name="twitter:image" content="https://cat8k.web.app/assets/images/web_qa-home.png">
+<meta name="twitter:creator" content="@MOREQASSE">
+<meta name="theme-color" content="#070d1a">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://cat8k.web.app/#website",
+      "url": "https://cat8k.web.app/",
+      "name": "CAT8k·SYNC",
+      "description": "Network automation, telemetry, provisioning, audit and analytics for the Cisco Catalyst 8000v."
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://cat8k.web.app/#software",
+      "name": "CAT8k·SYNC",
+      "url": "https://cat8k.web.app/",
+      "description": "Open-source network automation platform for the Cisco Catalyst 8000v: live RESTCONF telemetry, one-click provisioning, compliance audit and long-term analytics.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "softwareVersion": "0.4.0",
+      "license": "https://www.apache.org/licenses/LICENSE-2.0",
+      "isAccessibleForFree": true,
+      "sameAs": "https://github.com/MOREQASSE/CAT8k-SYNC",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "author": { "@id": "https://moreqasse.work.gd/#person" },
+      "publisher": { "@id": "https://moreqasse.work.gd/#person" },
+      "screenshot": { "@type": "ImageObject", "url": "https://cat8k.web.app/assets/images/web_qa-home.png" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://moreqasse.work.gd/#person",
+      "name": "Mohammed Reqasse",
+      "url": "https://moreqasse.work.gd/",
+      "sameAs": "https://github.com/MOREQASSE"
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -17,7 +75,7 @@
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a class="brand" href="#top">
-      <img src="assets/images/cat8k_logo.png" alt="CAT8k·SYNC logo" class="brand-mark">
+      <img src="assets/images/cat8k_logo.webp" width="40" height="40" alt="CAT8k·SYNC logo" class="brand-mark">
       <span class="brand-name">CAT8k<span class="brand-dot">·</span>SYNC</span>
     </a>
     <nav class="nav-links" aria-label="primary">
@@ -85,7 +143,7 @@
             <span class="chrome-btn chrome-green"></span>
             <span class="chrome-url">127.0.0.1:17771/#home</span>
           </div>
-          <img src="assets/images/web_qa-home.png" alt="CAT8k·SYNC dashboard — home view" loading="eager">
+          <img src="assets/images/web_qa-home.webp" width="1480" height="940" alt="CAT8k·SYNC dashboard showing Cisco Catalyst 8000v fabric health, compliance score and live event feed" loading="eager" fetchpriority="high">
         </div>
       </div>
     </div>
@@ -175,40 +233,40 @@
     </div>
 
     <div class="gallery reveal" id="gallery">
-      <figure class="g-item" data-src="assets/images/web_qa-home.png" data-cap="Home — fabric posture, live gauges, event feed">
-        <img src="assets/images/web_qa-home.png" alt="Home view" loading="lazy">
+      <figure class="g-item" data-src="assets/images/web_qa-home.webp" data-cap="Home — fabric posture, live gauges, event feed">
+        <img src="assets/images/web_qa-home.webp" width="1480" height="940" alt="CAT8k·SYNC home dashboard — Catalyst 8000v fabric posture, compliance gauge and event feed" loading="lazy">
         <figcaption>HOME</figcaption>
       </figure>
-      <figure class="g-item" data-src="assets/images/web_qa-telemetry.png" data-cap="Telemetry — packet distribution, ARP/OSPF/BGP tables">
-        <img src="assets/images/web_qa-telemetry.png" alt="Telemetry view" loading="lazy">
+      <figure class="g-item" data-src="assets/images/web_qa-telemetry.webp" data-cap="Telemetry — packet distribution, ARP/OSPF/BGP tables">
+        <img src="assets/images/web_qa-telemetry.webp" width="1480" height="940" alt="CAT8k·SYNC telemetry view — Catalyst 8000v packet distribution, ARP, OSPF and BGP tables" loading="lazy">
         <figcaption>TELEMETRY</figcaption>
       </figure>
-      <figure class="g-item" data-src="assets/images/web_qa-topology.png" data-cap="Topology — live fabric map with host tags">
-        <img src="assets/images/web_qa-topology.png" alt="Topology view" loading="lazy">
+      <figure class="g-item" data-src="assets/images/web_qa-topology.webp" data-cap="Topology — live fabric map with host tags">
+        <img src="assets/images/web_qa-topology.webp" width="1480" height="940" alt="CAT8k·SYNC topology view — live Catalyst 8000v fabric map with host tags" loading="lazy">
         <figcaption>TOPOLOGY</figcaption>
       </figure>
-      <figure class="g-item" data-src="assets/images/web_qa-ops.png" data-cap="Ops — bring interfaces up, one click at a time">
-        <img src="assets/images/web_qa-ops.png" alt="Ops view" loading="lazy">
+      <figure class="g-item" data-src="assets/images/web_qa-ops.webp" data-cap="Ops — bring interfaces up, one click at a time">
+        <img src="assets/images/web_qa-ops.webp" width="1480" height="940" alt="CAT8k·SYNC ops view — one-click Catalyst 8000v interface bring-up" loading="lazy">
         <figcaption>OPS</figcaption>
       </figure>
-      <figure class="g-item" data-src="assets/images/web_qa-models.png" data-cap="Models — device data-model explorer">
-        <img src="assets/images/web_qa-models.png" alt="Models view" loading="lazy">
+      <figure class="g-item" data-src="assets/images/web_qa-models.webp" data-cap="Models — device data-model explorer">
+        <img src="assets/images/web_qa-models.webp" width="1480" height="940" alt="CAT8k·SYNC models view — Cisco IOS-XE data-model explorer for Catalyst 8000v" loading="lazy">
         <figcaption>MODELS</figcaption>
       </figure>
-      <figure class="g-item" data-src="assets/images/web_qa-audit.png" data-cap="Audit — posture score, findings, fixes and ledger">
-        <img src="assets/images/web_qa-audit.png" alt="Audit view" loading="lazy">
+      <figure class="g-item" data-src="assets/images/web_qa-audit.webp" data-cap="Audit — posture score, findings, fixes and ledger">
+        <img src="assets/images/web_qa-audit.webp" width="1480" height="940" alt="CAT8k·SYNC audit view — Catalyst 8000v compliance posture score, findings, fixes and ledger" loading="lazy">
         <figcaption>AUDIT</figcaption>
       </figure>
-      <figure class="g-item" data-src="assets/images/web_qa-analytics.png" data-cap="Analytics — compliance history, throughput, top talkers">
-        <img src="assets/images/web_qa-analytics.png" alt="Analytics view" loading="lazy">
+      <figure class="g-item" data-src="assets/images/web_qa-analytics.webp" data-cap="Analytics — compliance history, throughput, top talkers">
+        <img src="assets/images/web_qa-analytics.webp" width="1480" height="940" alt="CAT8k·SYNC analytics view — Catalyst 8000v compliance history, throughput and top talkers" loading="lazy">
         <figcaption>ANALYTICS</figcaption>
       </figure>
-      <figure class="g-item" data-src="assets/images/web_qa-profile.png" data-cap="Profile — VPN profiles, credentials, device studio">
-        <img src="assets/images/web_qa-profile.png" alt="Profile view" loading="lazy">
+      <figure class="g-item" data-src="assets/images/web_qa-profile.webp" data-cap="Profile — VPN profiles, credentials, device studio">
+        <img src="assets/images/web_qa-profile.webp" width="1480" height="940" alt="CAT8k·SYNC profile view — VPN profiles, encrypted credentials and device studio" loading="lazy">
         <figcaption>PROFILE</figcaption>
       </figure>
-      <figure class="g-item" data-src="assets/images/web_qa-provision.png" data-cap="Provision — branch plan, actions, add-pc registry">
-        <img src="assets/images/web_qa-provision.png" alt="Provision view" loading="lazy">
+      <figure class="g-item" data-src="assets/images/web_qa-provision.webp" data-cap="Provision — branch plan, actions, add-pc registry">
+        <img src="assets/images/web_qa-provision.webp" width="1480" height="940" alt="CAT8k·SYNC provision view — Catalyst 8000v branch plan, actions and add-pc registry" loading="lazy">
         <figcaption>PROVISION</figcaption>
       </figure>
     </div>
@@ -232,7 +290,7 @@
           <span class="chrome-btn chrome-green"></span>
           <span class="chrome-url">/#analytics · 1W</span>
         </div>
-        <img src="assets/images/charts_labels_final.png" alt="Analytics charts with window labels" loading="lazy">
+        <img src="assets/images/charts_labels_final.webp" width="1440" height="900" alt="CAT8k·SYNC analytics charts — Catalyst 8000v resource load, throughput and top talkers with window labels" loading="lazy">
       </div>
       <ul class="analytics-list reveal">
         <li><span class="li-num">01</span>Compliance score history on a segmented speedometer — red at zero, green at your score.</li>
@@ -254,7 +312,7 @@
 
     <div class="arch-cols">
       <div class="arch-visual reveal">
-        <img src="assets/images/device_backend_dual_mode.png" alt="Dual-mode device backend — RESTCONF primary, NETCONF + SSH fallback" loading="lazy">
+        <img src="assets/images/device_backend_dual_mode.webp" width="1440" height="900" alt="CAT8k·SYNC dual-mode device backend — RESTCONF primary, NETCONF and SSH fallback for Catalyst 8000v" loading="lazy">
       </div>
       <div class="arch-list reveal">
         <div class="arch-item">
@@ -327,7 +385,7 @@
       <div class="cta-glow"></div>
     </div>
     <div class="cta-inner reveal">
-      <img src="assets/images/Catalyst8000.jpg" alt="Cisco Catalyst 8000v hardware" class="cta-hardware" loading="lazy">
+      <img src="assets/images/Catalyst8000.webp" width="929" height="271" alt="Cisco Catalyst 8000v edge router hardware" class="cta-hardware" loading="lazy" decoding="async">
       <h2>Take the controls.</h2>
       <p>Fork it, run it against the always-on DevNet Sandbox, and turn one router into a managed fabric.</p>
       <div class="hero-actions">
@@ -346,7 +404,7 @@
 <footer class="footer">
   <div class="footer-inner">
     <a class="brand" href="#top">
-      <img src="assets/images/cat8k_logo.png" alt="CAT8k·SYNC logo" class="brand-mark">
+      <img src="assets/images/cat8k_logo.webp" width="40" height="40" alt="CAT8k logo" class="brand-mark">
       <span class="brand-name">CAT8k<span class="brand-dot">·</span>SYNC</span>
     </a>
     <p class="footer-note">

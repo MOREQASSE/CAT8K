@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://cat8k.web.app/</loc>
+    <lastmod>2026-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://cat8k.web.app/assets/images/web_qa-home.webp</image:loc>
+      <image:title>CAT8k·SYNC dashboard for Cisco Catalyst 8000v</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cat8k.web.app/assets/images/web_qa-telemetry.webp</image:loc>
+      <image:title>CAT8k·SYNC telemetry view — Catalyst 8000v packet distribution and routing tables</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cat8k.web.app/assets/images/web_qa-topology.webp</image:loc>
+      <image:title>CAT8k·SYNC topology view — live Catalyst 8000v fabric map</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cat8k.web.app/assets/images/web_qa-audit.webp</image:loc>
+      <image:title>CAT8k·SYNC audit view — Catalyst 8000v compliance score and findings</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cat8k.web.app/assets/images/web_qa-analytics.webp</image:loc>
+      <image:title>CAT8k·SYNC analytics view — Catalyst 8000v compliance history and throughput</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cat8k.web.app/assets/images/charts_labels_final.webp</image:loc>
+      <image:title>CAT8k·SYNC analytics charts with windowed labels for Catalyst 8000v</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cat8k.web.app/assets/images/device_backend_dual_mode.webp</image:loc>
+      <image:title>CAT8k·SYNC dual-mode device backend — RESTCONF, NETCONF and SSH</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://cat8k.web.app/assets/images/Catalyst8000.webp</image:loc>
+      <image:title>Cisco Catalyst 8000v edge router hardware</image:title>
+    </image:image>
+  </url>
+</urlset>
