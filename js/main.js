@@ -125,6 +125,28 @@
     if (e.key === "Escape" && !lb.hidden) closeLb();
   });
 
+  /* ---------- mobile menu ---------- */
+  var burger = document.getElementById("navBurger");
+  var menu = document.getElementById("mobileMenu");
+  function setMenu(open) {
+    menu.classList.toggle("open", open);
+    menu.hidden = !open;
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    document.body.classList.toggle("menu-locked", open);
+  }
+  if (burger && menu) {
+    burger.addEventListener("click", function () {
+      setMenu(!menu.classList.contains("open"));
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && menu.classList.contains("open")) setMenu(false);
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 900 && menu.classList.contains("open")) setMenu(false);
+    });
+  }
+
   /* ---------- smooth anchor offset ---------- */
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener("click", function (e) {
@@ -133,6 +155,7 @@
       var target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
+      if (menu && menu.classList.contains("open")) setMenu(false);
       var top = target.getBoundingClientRect().top + window.scrollY - 72;
       window.scrollTo({ top: top, behavior: "smooth" });
     });
